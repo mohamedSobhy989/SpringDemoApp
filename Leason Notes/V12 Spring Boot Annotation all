@@ -1,0 +1,14 @@
+Spring Boot Annotation
+--> Controller Annotation
+    --> @Controller --> to declare class as a Controller
+    --> @RestController --> to declare a class as  a rest used with rest api
+    --> @Autowired --> to inject object and create instance
+    --> @Component --> class cannot be inject by Autowired if not be declared as a Component
+    --> @GetMapping --> used with function that returned data from server (select function)
+    --> @PostMapping -->  used with function that store data on server  (insert function)
+    --> @PutMapping  --> used with function that update data on server (update function)
+    --> @DeleteMapping --> used with function that delete data from server (delete function)
+    --> @PathVariable --> used in function declaration before function parameter
+                          that mean i will take parameter from browser  ek.
+                          public Employee findByID(@PathVariable Long id)
+    -->

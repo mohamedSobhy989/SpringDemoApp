@@ -1,0 +1,19 @@
+Spring Data (JDBC Templete)
+    --> JDBC Template is a library/template used to deal with database
+    --> JDBC Template have multi function help us to deal with database
+    --> JDBC Template connected with database through application properties
+    --> most popular function used on JDBC Template
+        -->  jdbcTemplate.query(statement,returned object like mapper)
+        -->  jdbcTemplate.queryForObject(statement,returned object like mapper)
+             --> statement like function find by id --> select * from employee where empID=1
+             --> returned object mapper object from the same table type --> mapper object from employee
+                 --> mapper object -> it's an object implement from RowMapper class
+                     and implements mapRow function this function map result set row to instance of object
+                     ex.
+                        public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
+                                return new Employee(rs.getLong("id"),
+                                        rs.getString("name"),
+                                        rs.getDouble("salary"),
+                                        rs.getString("deptName"));
+                            }
+                     --> constructor of employee class must be declared with all needed attributes

@@ -1,0 +1,9 @@
+Scope of Bean
+    --> Prototype --> Container return different instance every request a bean  (default)
+    --> singleton --> Container return the same instance every request
+                      this instance saved on cash and returned with every request
+    --> Web aware
+        --> Request --> every http request container define new instance from the bean\
+        --> session --> every http session container define new instance from the bean
+        --> Global-session --> globel for session
+        

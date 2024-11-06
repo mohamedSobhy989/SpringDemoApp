@@ -1,0 +1,27 @@
+Spring Data
+--> It makes it easy to use data access technologies, relational and non-relational databases,
+    map-reduce frameworks, and cloud-based data services.
+--> This is an umbrella project which contains many subprojects that are specific to a given database.
+
+Lifecycle
+    --> 1) Models         -> classes that represent table on database
+    --> 2) Repository     -> Interface classes contain template function of model class (db operation like CRUD)
+    --> 3) Implementation -> implement repository class for model object
+    --> 4) Controller     -> Business operation
+
+    Controller ---used---> Implementation
+                Implementation ---used---> Repository
+                                Repository ---used---> Models
+  --> every model have all category of life cycle
+
+  Example of spring jdbc life cycle on project (SpringDataEX)
+
+  in the advantages of spring boot
+    --> we can use commandline runner and execute something in database with project startup
+        create class that implement run function from 'CommandLineRunner class'
+        in this function we do any thing
+        --> like ...
+            --> using query function from jdbcTemplete class ex.
+                --> JdbcTemplate.query("drop database if exists employee");
+                --> JdbcTemplate.query("create table employee (column))");
+                --> can insert some data on database for test in startup

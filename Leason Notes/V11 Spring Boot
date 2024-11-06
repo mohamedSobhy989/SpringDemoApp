@@ -1,0 +1,26 @@
+what is Spring Boot?
+    --> Spring boot is a project that built on the top of spring framework
+    --> provide easier and faster way to setup, configure and run both simple and web application
+
+                                        xml Bean configuration
+    Springframework + embedded server - class Configuration     = Spring Boot
+                           tomcat          @configuration
+
+Advantages of Spring Boot
+    --> create stand alone spring application that can be started using java-jar
+        --> extract jar file with all needed from library and plugin and can run it without any
+            necessary any thing
+    --> test web application easily with the help of embedded http server like tomcat, jetty
+    --> there is no requirement for xml configuration because spring boot use annotation
+    --> it offers number of plugins --> have many plugin can be use it through POM maven file
+    --> provide group of starters declared on pom file this starter like a parent for dependencies
+        ex.     spring-boot-starter-parent
+                spring-boot-starter-data-jdbc
+    --> provide production-ready feature such as metrics, and health check
+    --> provide CLI tool for developing and testing spring application
+    --> it increase productivity and reduce development time
+Limitation of Spring Boot
+    --> Spring boot can use dependancy that are not going to be used in the application
+        this increase size of application
+
+

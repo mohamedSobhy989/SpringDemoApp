@@ -1,0 +1,9 @@
+Spring Application Runner
+    --> Spring Boot provide two interfaces CommandLineRunner and ApplicationRunner to run a spacific
+        pieces of code after application fully started by called run function
+
+        --> Differance between CommandLineRunner and ApplicationRunner
+            --> CommandLineRunner -> run function take parameter as a list of string
+            --> ApplicationRunner -> run function take a parameter as a applicationArguments object
+            --> if we use two classes
+                run function on ApplicationRunner will run first

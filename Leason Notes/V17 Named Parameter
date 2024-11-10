@@ -1,0 +1,11 @@
+ Spring Data JDBCTemplate..
+    --> in Spring boot - JdbcTemplate Class we can use query, queryForObject functions
+        --> in this functions
+            --> First parameter is sql Statement in this statement if i need to take parameter from user
+                 Like --> insert into employee (id,name,deptName,salary) values (?,?,?,?)
+                 ? --> this means value of id i will take it from user as a parameter
+                       this called ( pined variable )
+                 how to give a value for pending variable?
+                    --> query or queryForObject functions take new parameter
+                            new Object[] {1,"ahmed","IT",25000}
+                        but if the number of parameter if more 

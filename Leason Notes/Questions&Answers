@@ -1,0 +1,34 @@
+Important Question...
+    Q1- What is the difference between @Component,@Service,@Repository and @Controller Annotation?
+
+        1- The @Component annotation is a generic stereotype for any Spring-managed component.
+           It is used to denote a class as a Spring bean, making it eligible for component scanning
+           and dependency injection.
+
+        2- The @Service annotation is a specialization of @Component that indicates a class holds business logic.
+           It adds semantic meaning, signaling that the class is part of the service layer.
+           Although it does not add any additional behavior beyond what @Component provides,
+           it enhances the readability and organization of your code by clearly defining the role of the class
+
+        3- The @Repository annotation is another specialization of @Component,
+           designed specifically for the persistence layer.
+           It signals that the class is responsible for data access and management.
+           In addition to semantic meaning,
+           @Repository provides automatic exception translation,
+                converting database-related exceptions into Spring’s DataAccessException.
+
+        4- The @Controller annotation is specialized for the presentation layer,
+           particularly in the context of web applications.
+           It indicates that a class handles HTTP requests and is typically used in conjunction with Spring MVC.
+           @Controller maps web requests to handler methods using annotations
+                like @RequestMapping, @GetMapping, etc.
+
+
+        Key Differences and Design Considerations
+            @Component: Use for general-purpose Spring beans.
+            @Service: Indicates business logic layer.
+            @Repository: Denotes persistence layer (DAOs) and provides exception translation.
+                         Convert database exception into Spring DataAccessException
+            @Controller: Used for presentation layer, handling web requests.
+---------------------------------------------------------------------------------------------------
+

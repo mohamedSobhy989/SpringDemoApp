@@ -1,0 +1,22 @@
+Persistent Layer
+    --> every program contents some of  layers
+        --> DB Layer --> Persistent Layer --> Business Logic Layer --> Presentation Layer
+Spring Boot JDBC
+    --> Provides starter and libraries for connecting application with DataBase
+    --> connected with database through configuration properties defined on application properties file
+    --> JdbcTemplate, NamedParameterJdbcTemplate and DataSource classes can be autowire to use it for
+        dealing with database
+JDBC Connection Pool
+    --> Mechanism that manage database connection request
+    --> Facilitates connection reuse
+    --> Memory cash on database connection
+    --> Connection pooling Module maintains it as a layer on top of any standard jdbc driver
+    --> manage database connections
+    --> Allocate new connections
+    --> close connection
+HikariCP --> Hikari Connection Pool
+         --> is jdbc datasource implementation that provide connection pool mechanism (default)
+         --> enterprise ready and better performance
+         --> if the hikari connection pool is defined on class path, spring automatically configure it
+         --> if not defined, spring automatically looks for Tomcat Jdbc Connection pool
+         --> if 2 options is not defined, spring boot choose apache commons DBCP2

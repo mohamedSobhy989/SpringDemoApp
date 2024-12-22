@@ -8,4 +8,6 @@
                  how to give a value for pending variable?
                     --> query or queryForObject functions take new parameter
                             new Object[] {1,"ahmed","IT",25000}
-                        but if the number of parameter if more 
+                        but if the number of parameter if more we will use NamedParameterJdbcTemplate Class
+                        ex --> insert into employee (id,name,deptName,salary) values (:id,:name,:deptName,:salary)
+                            namedParameterJdbcTemplate.quaryForObject(statement,Map)

@@ -1,0 +1,40 @@
+Spring Boot Annotations
+    1- @SpringBootApplication --> class based annotation on class that have main function
+                              --> this annotation has Embedded Annotations
+                                    --> @Target
+                                    --> @Documented
+                                    --> @Retention(RetentionPolicy. RUNTIME)
+                                    --> @Documented
+                                    --> @Inherited
+                                    --> @SpringBootConfiguration
+                                    --> @EnableAutoConfiguration
+                                    --> @ComponentScan
+
+    2- @Autowired --> used on setter function or variable, make container create object/instance
+                    by matching the datatype
+    3- @Component --> it's a class level, used with class, make container use this class as a bean
+                      @Autowired dont work if a class not a component
+            ex.
+                @Component
+                public class Employee {} --> container consider employee as a bean and if any variable
+                                            defined as @Autowired container will create instance and send it
+                @Autowired
+                public Employee employee; --> employee is injected by autowired annotation and component
+                            if employee is not defined as a component spring will throw error because container
+                            don't have bean from employee. so @Component bake container create bean stored on container
+                            and @Autowired make container create instance from bean/class
+
+    4- @ComponentScan --> tell container to scan specific package for beans
+                          @ComponentScan("package path")
+    5- @Configuration --> it's class level for register beans to container without xml file
+
+    6- @Bean  --> it's a method level annotation , it is an alternative of xml <bean> tag
+          it tell the method to produce a bean to maneged by spring container this method must return an object
+
+    7- @Service --> it is a class level, it tell the spring that class contains the business logic
+                    this annotation composed another annotation like  @Component, @Autowired
+    8- @Repository --> it is a class level, it tell the spring that this class is a (DAOs) data access object
+                       that access the database directory
+
+
+
